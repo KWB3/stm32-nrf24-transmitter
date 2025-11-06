@@ -46,15 +46,15 @@
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
 /*
-Byte0   : 0xAB            // HEADER (시작 마커)
-Byte1   : seq             // 시퀀스 번호 (0..255)
-Byte2   : joy0_x  	  	// 좌스틱 X (0~255)  -> 좌/우(스트래프)
-Byte3   : joy0_y   		// 좌스틱 Y (0~255) -> 앞/뒤(전후)
-Byte4   : joy1_x 	 	 // 우스틱 X (0~255)  -> 회전(좌/우)
-Byte5   : joy1_y 	 	// 우스틱 Y (0~255) -> 보조(예: 감도, 쓰로틀) (선택)
-Byte6   : btn_flags (u8)  // 버튼 비트맵: bit0..3=버튼1..4, 나머 예약
-Byte7   : checksum (u8)   // simple checksum (예: sum of bytes1..6) & 0xFF
-Byte8   : 0xBA            // TAIL (끝 마커)
+Byte0   : 0xAB          // HEADER (시작 마커)
+Byte1   : seq           // 시퀀스 번호 (0..255)
+Byte2   : x1  	  		// 좌스틱 X (0~255)
+Byte3   : y1   			// 좌스틱 Y (0~255)
+Byte4   : x2 		 	// 우스틱 X (0~255)  
+Byte5   : y2	 	 	// 우스틱 Y (0~255)
+Byte6   : btn_flags		// 버튼 비트맵: bit0..3=버튼1..4, 나머 예약
+Byte7   : checksum		// simple checksum (예: sum of bytes1..6) & 0xFF
+Byte8   : 0xBA          // TAIL (끝 마커)
  */
 volatile uint16_t adcval[4];
 uint8_t tx_data[NRF24L01P_PAYLOAD_LENGTH] = {0};
