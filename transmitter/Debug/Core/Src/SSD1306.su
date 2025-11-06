@@ -1,0 +1,8 @@
+../Core/Src/SSD1306.c:31:6:SSD1306_Init	24	static
+../Core/Src/SSD1306.c:42:6:SSD1306_WriteCommand	32	static
+../Core/Src/SSD1306.c:48:6:SSD1306_WriteData	56	dynamic
+../Core/Src/SSD1306.c:56:6:SSD1306_Clear	8	static
+../Core/Src/SSD1306.c:61:6:SSD1306_UpdateScreen	16	static
+../Core/Src/SSD1306.c:72:6:SSD1306_SetPixel	24	static
+../Core/Src/SSD1306.c:95:6:SSD1306_DrawChar	32	static
+../Core/Src/SSD1306.c:112:6:SSD1306_DrawString	16	static
