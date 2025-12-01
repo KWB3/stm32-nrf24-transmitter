@@ -134,6 +134,7 @@ int main(void)
 	/* Initialize interrupts */
 	MX_NVIC_Init();
 	/* USER CODE BEGIN 2 */
+	HAL_Delay(200);	// oled 전원 안정화를 위한 딜레이 추가 .
 	SSD1306_Init(&hi2c1);
 	HAL_ADC_Start_DMA(&hadc1, adcval, 4);
 	nrf24l01p_tx_init(2500, _1Mbps);
